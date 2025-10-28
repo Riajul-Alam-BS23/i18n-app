@@ -1,0 +1,65 @@
+{
+  "app": {
+    "title": "Internationalisierungs-App",
+    "welcome": "Willkommen in unserer mehrsprachigen Anwendung"
+  },
+  "nav": {
+    "home": "Startseite",
+    "faq": "FAQ",
+    "about": "Über uns"
+  },
+  "home": {
+    "title": "Startseite",
+    "subtitle": "Willkommen auf der Startseite",
+    "description": "Dies ist eine Demonstration der Internationalisierung (i18n) in Angular mit ngx-translate. Sie können zwischen verschiedenen Sprachen wechseln, indem Sie den Sprachauswahl in der Navigationsleiste verwenden.",
+    "features": {
+      "title": "Hauptmerkmale",
+      "feature1": "Mehrsprachige Unterstützung",
+      "feature2": "Dynamischer Sprachwechsel",
+      "feature3": "Einfache Integration",
+      "feature4": "Übersetzungsverwaltung"
+    },
+    "cta": "Mehr erfahren"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen",
+    "q1": {
+      "question": "Was ist Internationalisierung?",
+      "answer": "Internationalisierung (i18n) ist der Prozess der Gestaltung und Vorbereitung Ihrer Anwendung, damit sie in verschiedenen Sprachen und Regionen verwendet werden kann."
+    },
+    "q2": {
+      "question": "Wie ändere ich die Sprache?",
+      "answer": "Verwenden Sie die Sprachauswahl in der Navigationsleiste, um zwischen Englisch, Deutsch und Bengali zu wechseln."
+    },
+    "q3": {
+      "question": "Ist es einfach, neue Sprachen hinzuzufügen?",
+      "answer": "Ja! Erstellen Sie einfach eine neue JSON-Datei im Ordner assets/i18n mit Ihren Übersetzungen."
+    },
+    "q4": {
+      "question": "Beeinträchtigt es die Leistung?",
+      "answer": "Nein, ngx-translate ist leichtgewichtig und lädt effizient nur die erforderlichen Sprachdateien."
+    }
+  },
+  "about": {
+    "title": "Über uns",
+    "subtitle": "Erfahren Sie mehr über unsere Anwendung",
+    "description": "Diese Anwendung demonstriert die Implementierung der Internationalisierung in Angular mithilfe der ngx-translate-Bibliothek. Sie zeigt, wie man eine mehrsprachige Webanwendung mit nahtlosem Sprachwechsel erstellt.",
+    "mission": {
+      "title": "Unsere Mission",
+      "text": "Ein umfassendes Beispiel für die Implementierung von i18n in Angular-Anwendungen bereitzustellen, damit Entwickler einfacher global zugängliche Anwendungen erstellen können."
+    },
+    "technology": {
+      "title": "Technologie-Stack",
+      "angular": "Angular - Frontend-Framework",
+      "ngxTranslate": "ngx-translate - Übersetzungsbibliothek",
+      "typescript": "TypeScript - Programmiersprache",
+      "scss": "SCSS - Styling"
+    },
+    "contact": "Kontaktieren Sie uns"
+  },
+  "footer": {
+    "copyright": "© 2025 i18n App. Alle Rechte vorbehalten.",
+    "language": "Sprache"
+  }
+}
