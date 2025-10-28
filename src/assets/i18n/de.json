@@ -6,7 +6,8 @@
   "nav": {
     "home": "Startseite",
     "faq": "FAQ",
-    "about": "Über uns"
+    "about": "Über uns",
+    "documentation": "Dokumentation"
   },
   "home": {
     "title": "Startseite",
@@ -61,5 +62,113 @@
   "footer": {
     "copyright": "© 2025 i18n App. Alle Rechte vorbehalten.",
     "language": "Sprache"
+  },
+  "documentation": {
+    "title": "i18n Implementierungsleitfaden",
+    "subtitle": "Vollständiger Leitfaden zur Internationalisierung in dieser Angular-Anwendung",
+    "toc": {
+      "title": "Inhaltsverzeichnis",
+      "overview": "Übersicht",
+      "features": "Hauptfunktionen",
+      "setup": "Einrichtung & Konfiguration",
+      "usage": "Verwendung",
+      "architecture": "Architektur",
+      "languages": "Unterstützte Sprachen"
+    },
+    "sections": {
+      "overview": {
+        "title": "Übersicht",
+        "intro": "Diese Anwendung demonstriert eine vollständige Implementierung der Internationalisierung (i18n) mit der ngx-translate-Bibliothek für Angular. Sie bietet mehrsprachige Unterstützung mit dynamischem Sprachwechsel, persistenter Sprachauswahl und Browser-Spracherkennung.",
+        "libraries": "Verwendete Bibliotheken",
+        "coreDesc": "Kernübersetzungsfunktionalität",
+        "loaderDesc": "HTTP-Loader für Übersetzungsdateien"
+      },
+      "features": {
+        "title": "Hauptfunktionen",
+        "multilang": "Mehrsprachige Unterstützung",
+        "multilangDesc": "Unterstützung für Englisch, Deutsch und Bengali",
+        "dynamic": "Dynamischer Wechsel",
+        "dynamicDesc": "Sprachen sofort ohne Seitenaktualisierung wechseln",
+        "persistent": "Persistente Auswahl",
+        "persistentDesc": "Sprachpräferenz in localStorage gespeichert",
+        "browser": "Browser-Erkennung",
+        "browserDesc": "Erkennt und verwendet automatisch die Browser-Sprache"
+      },
+      "setup": {
+        "title": "Einrichtung & Konfiguration",
+        "step1": {
+          "title": "Schritt 1: TranslateModule konfigurieren",
+          "desc": "Richten Sie das TranslateModule in app.module.ts mit der benutzerdefinierten HTTP-Loader-Factory-Funktion ein."
+        },
+        "step2": {
+          "title": "Schritt 2: Übersetzungs-Loader erstellen",
+          "desc": "Implementieren Sie einen benutzerdefinierten Übersetzungs-Loader, der JSON-Dateien aus dem Assets-Ordner mit Cache-Busting lädt."
+        },
+        "step3": {
+          "title": "Schritt 3: In App-Komponente initialisieren",
+          "desc": "Richten Sie den TranslateService in der Haupt-App-Komponente ein, um die Standardsprache zu verwalten und gespeicherte Präferenzen zu laden."
+        },
+        "step4": {
+          "title": "Schritt 4: Sprachumschalter erstellen",
+          "desc": "Erstellen Sie eine Komponente, mit der Benutzer über eine Dropdown-Auswahl zwischen Sprachen wechseln können."
+        }
+      },
+      "usage": {
+        "title": "Übersetzungen verwenden",
+        "template": {
+          "title": "In Vorlagen",
+          "desc": "Verwenden Sie die Übersetzungspipe in Ihren HTML-Vorlagen, um übersetzten Text anzuzeigen."
+        },
+        "files": {
+          "title": "Übersetzungsdateien",
+          "desc": "Übersetzungsdateien werden in src/assets/i18n/ als JSON-Dateien gespeichert (en.json, de.json, bn.json)."
+        },
+        "note": {
+          "title": "Wichtiger Hinweis:",
+          "desc": "Alle Übersetzungsdateien müssen die gleiche Struktur mit übereinstimmenden Schlüsseln haben, damit Übersetzungen in allen Sprachen korrekt funktionieren."
+        }
+      },
+      "architecture": {
+        "title": "Systemarchitektur",
+        "intro": "Das i18n-System folgt einer geschichteten Architektur zum Laden und Verwalten von Übersetzungen:",
+        "components": {
+          "app": "App-Komponente",
+          "appDesc": "Initialisiert Spracheinstellungen und lädt gespeicherte Präferenzen",
+          "translate": "TranslateService",
+          "translateDesc": "Verwaltet die aktuelle Sprache und stellt Übersetzungsmethoden bereit",
+          "loader": "HTTP-Loader",
+          "loaderDesc": "Lädt Übersetzungs-JSON-Dateien vom Server",
+          "files": "Übersetzungsdateien",
+          "filesDesc": "JSON-Dateien mit Schlüssel-Wert-Paaren für jede Sprache"
+        }
+      },
+      "languages": {
+        "title": "Unterstützte Sprachen",
+        "intro": "Diese Anwendung unterstützt derzeit drei Sprachen:",
+        "code": "Code",
+        "status": "Status",
+        "active": "Aktiv",
+        "adding": {
+          "title": "Eine neue Sprache hinzufügen",
+          "desc": "Um Unterstützung für eine neue Sprache hinzuzufügen:",
+          "step1": "Erstellen Sie eine neue JSON-Datei in src/assets/i18n/ (z.B. fr.json für Französisch)",
+          "step2": "Kopieren Sie die Struktur aus en.json und übersetzen Sie alle Werte",
+          "step3": "Fügen Sie die Sprache zur Sprachumschalter-Komponente hinzu"
+        }
+      },
+      "bestPractices": {
+        "title": "Best Practices",
+        "item1": "Verwenden Sie immer Übersetzungsschlüssel anstelle von hartcodiertem Text in Vorlagen",
+        "item2": "Halten Sie die Struktur der Übersetzungsdateien in allen Sprachen konsistent",
+        "item3": "Verwenden Sie hierarchische Schlüssel (z.B. 'home.title') für bessere Organisation",
+        "item4": "Testen Sie alle Sprachen nach Änderungen, um sicherzustellen, dass nichts kaputt ist"
+      },
+      "resources": {
+        "title": "Zusätzliche Ressourcen",
+        "link1": "ngx-translate/core - Offizielle Dokumentation",
+        "link2": "Angular i18n Leitfaden - Offizieller Angular-Leitfaden",
+        "link3": "ngx-translate/http-loader - HTTP-Loader-Dokumentation"
+      }
+    }
   }
 }

@@ -2,6 +2,12 @@
 
 A fully functional Angular application demonstrating internationalization (i18n) using ngx-translate with support for English, German, and Bengali languages.
 
+## 🌐 Live Demo
+
+**Coming Soon:** `https://YOUR_USERNAME.github.io/i18n-app/`
+
+> See [DEPLOYMENT_STEPS.md](./DEPLOYMENT_STEPS.md) for quick deployment guide
+
 ## 🌍 Features
 
 - ✅ Multi-language support (English, German, Bengali)
@@ -29,8 +35,20 @@ Navigate to `http://localhost:4200/`
 ### Build for Production
 
 ```bash
-npm run build
+npm run build:prod
 ```
+
+### Deploy to GitHub Pages
+
+```bash
+# One-time setup
+npm install -g angular-cli-ghpages
+
+# Deploy
+npm run deploy
+```
+
+See [DEPLOYMENT_STEPS.md](./DEPLOYMENT_STEPS.md) for complete guide.
 
 ## 📁 Project Structure
 

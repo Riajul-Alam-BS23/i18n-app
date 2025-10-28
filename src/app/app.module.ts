@@ -9,6 +9,7 @@ import { App } from './app';
 import { Home } from './pages/home/home';
 import { Faq } from './pages/faq/faq';
 import { About } from './pages/about/about';
+import { Documentation } from './pages/documentation/documentation';
 import { LanguageSwitcher } from './shared/components/language-switcher';
 import { HttpLoaderFactory } from './core/services/translation-loader';
 
@@ -18,6 +19,7 @@ import { HttpLoaderFactory } from './core/services/translation-loader';
     Home,
     Faq,
     About,
+    Documentation,
     LanguageSwitcher
   ],
   imports: [

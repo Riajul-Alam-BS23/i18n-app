@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { Home } from './pages/home/home';
 import { Faq } from './pages/faq/faq';
 import { About } from './pages/about/about';
+import { Documentation } from './pages/documentation/documentation';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: Home },
   { path: 'faq', component: Faq },
   { path: 'about', component: About },
+  { path: 'documentation', component: Documentation },
   { path: '**', redirectTo: '/home' }
 ];
 

@@ -1,0 +1,229 @@
+<div class="documentation-container">
+  <!-- Header -->
+  <div class="doc-header">
+    <h1>{{ 'documentation.title' | translate }}</h1>
+    <p class="subtitle">{{ 'documentation.subtitle' | translate }}</p>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="toc-card">
+    <h2>{{ 'documentation.toc.title' | translate }}</h2>
+    <ul class="toc-list">
+      <li><a (click)="scrollToSection('overview')">{{ 'documentation.toc.overview' | translate }}</a></li>
+      <li><a (click)="scrollToSection('features')">{{ 'documentation.toc.features' | translate }}</a></li>
+      <li><a (click)="scrollToSection('setup')">{{ 'documentation.toc.setup' | translate }}</a></li>
+      <li><a (click)="scrollToSection('usage')">{{ 'documentation.toc.usage' | translate }}</a></li>
+      <li><a (click)="scrollToSection('architecture')">{{ 'documentation.toc.architecture' | translate }}</a></li>
+      <li><a (click)="scrollToSection('languages')">{{ 'documentation.toc.languages' | translate }}</a></li>
+    </ul>
+  </div>
+
+  <!-- Overview Section -->
+  <section id="overview" class="doc-section">
+    <h2>{{ 'documentation.sections.overview.title' | translate }}</h2>
+    <p>{{ 'documentation.sections.overview.intro' | translate }}</p>
+    
+    <div class="info-box">
+      <h3>{{ 'documentation.sections.overview.libraries' | translate }}</h3>
+      <ul>
+        <li><strong>@ngx-translate/core</strong> v17.0.0 - {{ 'documentation.sections.overview.coreDesc' | translate }}</li>
+        <li><strong>@ngx-translate/http-loader</strong> v17.0.0 - {{ 'documentation.sections.overview.loaderDesc' | translate }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="doc-section">
+    <h2>{{ 'documentation.sections.features.title' | translate }}</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🌍</div>
+        <h3>{{ 'documentation.sections.features.multilang' | translate }}</h3>
+        <p>{{ 'documentation.sections.features.multilangDesc' | translate }}</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔄</div>
+        <h3>{{ 'documentation.sections.features.dynamic' | translate }}</h3>
+        <p>{{ 'documentation.sections.features.dynamicDesc' | translate }}</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💾</div>
+        <h3>{{ 'documentation.sections.features.persistent' | translate }}</h3>
+        <p>{{ 'documentation.sections.features.persistentDesc' | translate }}</p>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌐</div>
+        <h3>{{ 'documentation.sections.features.browser' | translate }}</h3>
+        <p>{{ 'documentation.sections.features.browserDesc' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Setup Section -->
+  <section id="setup" class="doc-section">
+    <h2>{{ 'documentation.sections.setup.title' | translate }}</h2>
+    
+    <div class="step">
+      <h3>{{ 'documentation.sections.setup.step1.title' | translate }}</h3>
+      <p>{{ 'documentation.sections.setup.step1.desc' | translate }}</p>
+      <div class="code-block">
+        <pre><code>{{ codeExamples.moduleSetup }}</code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <h3>{{ 'documentation.sections.setup.step2.title' | translate }}</h3>
+      <p>{{ 'documentation.sections.setup.step2.desc' | translate }}</p>
+      <div class="code-block">
+        <pre><code>{{ codeExamples.translationLoader }}</code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <h3>{{ 'documentation.sections.setup.step3.title' | translate }}</h3>
+      <p>{{ 'documentation.sections.setup.step3.desc' | translate }}</p>
+      <div class="code-block">
+        <pre><code>{{ codeExamples.appComponent }}</code></pre>
+      </div>
+    </div>
+
+    <div class="step">
+      <h3>{{ 'documentation.sections.setup.step4.title' | translate }}</h3>
+      <p>{{ 'documentation.sections.setup.step4.desc' | translate }}</p>
+      <div class="code-block">
+        <pre><code>{{ codeExamples.languageSwitcher }}</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- Usage Section -->
+  <section id="usage" class="doc-section">
+    <h2>{{ 'documentation.sections.usage.title' | translate }}</h2>
+    
+    <h3>{{ 'documentation.sections.usage.template.title' | translate }}</h3>
+    <p>{{ 'documentation.sections.usage.template.desc' | translate }}</p>
+    <div class="code-block">
+      <pre><code>{{ codeExamples.templateUsage }}</code></pre>
+    </div>
+
+    <h3>{{ 'documentation.sections.usage.files.title' | translate }}</h3>
+    <p>{{ 'documentation.sections.usage.files.desc' | translate }}</p>
+    <div class="code-block">
+      <pre><code>{{ codeExamples.translationFile }}</code></pre>
+    </div>
+
+    <div class="info-box warning">
+      <strong>{{ 'documentation.sections.usage.note.title' | translate }}</strong>
+      <p>{{ 'documentation.sections.usage.note.desc' | translate }}</p>
+    </div>
+  </section>
+
+  <!-- Architecture Section -->
+  <section id="architecture" class="doc-section">
+    <h2>{{ 'documentation.sections.architecture.title' | translate }}</h2>
+    <p>{{ 'documentation.sections.architecture.intro' | translate }}</p>
+
+    <div class="architecture-diagram">
+      <div class="arch-box">
+        <h4>{{ 'documentation.sections.architecture.components.app' | translate }}</h4>
+        <p>{{ 'documentation.sections.architecture.components.appDesc' | translate }}</p>
+      </div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-box">
+        <h4>{{ 'documentation.sections.architecture.components.translate' | translate }}</h4>
+        <p>{{ 'documentation.sections.architecture.components.translateDesc' | translate }}</p>
+      </div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-box">
+        <h4>{{ 'documentation.sections.architecture.components.loader' | translate }}</h4>
+        <p>{{ 'documentation.sections.architecture.components.loaderDesc' | translate }}</p>
+      </div>
+      <div class="arch-arrow">↓</div>
+      <div class="arch-box">
+        <h4>{{ 'documentation.sections.architecture.components.files' | translate }}</h4>
+        <p>{{ 'documentation.sections.architecture.components.filesDesc' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Languages Section -->
+  <section id="languages" class="doc-section">
+    <h2>{{ 'documentation.sections.languages.title' | translate }}</h2>
+    <p>{{ 'documentation.sections.languages.intro' | translate }}</p>
+
+    <div class="languages-grid">
+      <div class="language-card">
+        <div class="lang-flag">🇬🇧</div>
+        <h3>English</h3>
+        <p><strong>{{ 'documentation.sections.languages.code' | translate }}:</strong> en</p>
+        <p><strong>{{ 'documentation.sections.languages.status' | translate }}:</strong> ✅ {{ 'documentation.sections.languages.active' | translate }}</p>
+      </div>
+      <div class="language-card">
+        <div class="lang-flag">🇩🇪</div>
+        <h3>Deutsch</h3>
+        <p><strong>{{ 'documentation.sections.languages.code' | translate }}:</strong> de</p>
+        <p><strong>{{ 'documentation.sections.languages.status' | translate }}:</strong> ✅ {{ 'documentation.sections.languages.active' | translate }}</p>
+      </div>
+      <div class="language-card">
+        <div class="lang-flag">🇧🇩</div>
+        <h3>বাংলা (Bengali)</h3>
+        <p><strong>{{ 'documentation.sections.languages.code' | translate }}:</strong> bn</p>
+        <p><strong>{{ 'documentation.sections.languages.status' | translate }}:</strong> ✅ {{ 'documentation.sections.languages.active' | translate }}</p>
+      </div>
+    </div>
+
+    <h3>{{ 'documentation.sections.languages.adding.title' | translate }}</h3>
+    <p>{{ 'documentation.sections.languages.adding.desc' | translate }}</p>
+    <ol>
+      <li>{{ 'documentation.sections.languages.adding.step1' | translate }}</li>
+      <li>{{ 'documentation.sections.languages.adding.step2' | translate }}</li>
+      <li>{{ 'documentation.sections.languages.adding.step3' | translate }}</li>
+    </ol>
+  </section>
+
+  <!-- Best Practices Section -->
+  <section class="doc-section best-practices">
+    <h2>{{ 'documentation.sections.bestPractices.title' | translate }}</h2>
+    <div class="practice-list">
+      <div class="practice-item">
+        <span class="practice-icon">✅</span>
+        <p>{{ 'documentation.sections.bestPractices.item1' | translate }}</p>
+      </div>
+      <div class="practice-item">
+        <span class="practice-icon">✅</span>
+        <p>{{ 'documentation.sections.bestPractices.item2' | translate }}</p>
+      </div>
+      <div class="practice-item">
+        <span class="practice-icon">✅</span>
+        <p>{{ 'documentation.sections.bestPractices.item3' | translate }}</p>
+      </div>
+      <div class="practice-item">
+        <span class="practice-icon">✅</span>
+        <p>{{ 'documentation.sections.bestPractices.item4' | translate }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources Section -->
+  <section class="doc-section resources">
+    <h2>{{ 'documentation.sections.resources.title' | translate }}</h2>
+    <ul class="resource-list">
+      <li>
+        <a href="https://github.com/ngx-translate/core" target="_blank" rel="noopener">
+          {{ 'documentation.sections.resources.link1' | translate }}
+        </a>
+      </li>
+      <li>
+        <a href="https://angular.io/guide/i18n" target="_blank" rel="noopener">
+          {{ 'documentation.sections.resources.link2' | translate }}
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/ngx-translate/http-loader" target="_blank" rel="noopener">
+          {{ 'documentation.sections.resources.link3' | translate }}
+        </a>
+      </li>
+    </ul>
+  </section>
+</div>
+
