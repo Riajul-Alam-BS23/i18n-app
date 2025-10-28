@@ -1,0 +1,65 @@
+{
+  "app": {
+    "title": "Internationalization App",
+    "welcome": "Welcome to our multilingual application"
+  },
+  "nav": {
+    "home": "Home",
+    "faq": "FAQ",
+    "about": "About"
+  },
+  "home": {
+    "title": "Home Page",
+    "subtitle": "Welcome to the Home Page",
+    "description": "This is a demonstration of internationalization (i18n) in Angular using ngx-translate. You can switch between different languages using the language selector in the navigation bar.",
+    "features": {
+      "title": "Key Features",
+      "feature1": "Multi-language support",
+      "feature2": "Dynamic language switching",
+      "feature3": "Easy integration",
+      "feature4": "Translation management"
+    },
+    "cta": "Learn More"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions",
+    "q1": {
+      "question": "What is internationalization?",
+      "answer": "Internationalization (i18n) is the process of designing and preparing your application to be usable in different languages and regions."
+    },
+    "q2": {
+      "question": "How do I change the language?",
+      "answer": "Use the language selector in the navigation bar to switch between English, German, and Bengali."
+    },
+    "q3": {
+      "question": "Is it easy to add new languages?",
+      "answer": "Yes! Simply create a new JSON file in the assets/i18n folder with your translations."
+    },
+    "q4": {
+      "question": "Does it affect performance?",
+      "answer": "No, ngx-translate is lightweight and efficiently loads only the required language files."
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Learn more about our application",
+    "description": "This application demonstrates the implementation of internationalization in Angular using the ngx-translate library. It showcases how to create a multilingual web application with seamless language switching.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "To provide a comprehensive example of implementing i18n in Angular applications, making it easier for developers to create globally accessible applications."
+    },
+    "technology": {
+      "title": "Technology Stack",
+      "angular": "Angular - Frontend Framework",
+      "ngxTranslate": "ngx-translate - Translation Library",
+      "typescript": "TypeScript - Programming Language",
+      "scss": "SCSS - Styling"
+    },
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "copyright": "© 2025 i18n App. All rights reserved.",
+    "language": "Language"
+  }
+}

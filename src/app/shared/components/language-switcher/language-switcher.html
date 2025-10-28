@@ -1,0 +1,13 @@
+<div class="language-switcher">
+  <label for="language-select">{{ 'footer.language' | translate }}:</label>
+  <select 
+    id="language-select"
+    [(ngModel)]="currentLang" 
+    (change)="switchLanguage(currentLang)"
+    class="language-select">
+    <option *ngFor="let lang of languages" [value]="lang.code">
+      {{ lang.name }}
+    </option>
+  </select>
+</div>
+
