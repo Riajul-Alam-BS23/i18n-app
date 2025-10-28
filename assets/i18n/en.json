@@ -6,7 +6,8 @@
   "nav": {
     "home": "Home",
     "faq": "FAQ",
-    "about": "About"
+    "about": "About",
+    "documentation": "Documentation"
   },
   "home": {
     "title": "Home Page",
@@ -61,5 +62,113 @@
   "footer": {
     "copyright": "© 2025 i18n App. All rights reserved.",
     "language": "Language"
+  },
+  "documentation": {
+    "title": "i18n Implementation Guide",
+    "subtitle": "Complete guide to internationalization in this Angular application",
+    "toc": {
+      "title": "Table of Contents",
+      "overview": "Overview",
+      "features": "Key Features",
+      "setup": "Setup & Configuration",
+      "usage": "How to Use",
+      "architecture": "Architecture",
+      "languages": "Supported Languages"
+    },
+    "sections": {
+      "overview": {
+        "title": "Overview",
+        "intro": "This application demonstrates a complete implementation of internationalization (i18n) using the ngx-translate library for Angular. It provides multi-language support with dynamic language switching, persistent language selection, and browser language detection.",
+        "libraries": "Libraries Used",
+        "coreDesc": "Core translation functionality",
+        "loaderDesc": "HTTP loader for translation files"
+      },
+      "features": {
+        "title": "Key Features",
+        "multilang": "Multi-language Support",
+        "multilangDesc": "Support for English, German, and Bengali languages",
+        "dynamic": "Dynamic Switching",
+        "dynamicDesc": "Change languages instantly without page reload",
+        "persistent": "Persistent Selection",
+        "persistentDesc": "Language preference saved in localStorage",
+        "browser": "Browser Detection",
+        "browserDesc": "Automatically detects and uses browser language"
+      },
+      "setup": {
+        "title": "Setup & Configuration",
+        "step1": {
+          "title": "Step 1: Configure TranslateModule",
+          "desc": "Set up the TranslateModule in app.module.ts with the custom HTTP loader factory function."
+        },
+        "step2": {
+          "title": "Step 2: Create Translation Loader",
+          "desc": "Implement a custom translation loader that loads JSON files from the assets folder with cache-busting."
+        },
+        "step3": {
+          "title": "Step 3: Initialize in App Component",
+          "desc": "Set up the TranslateService in the main app component to handle default language and load saved preferences."
+        },
+        "step4": {
+          "title": "Step 4: Create Language Switcher",
+          "desc": "Build a component that allows users to switch between languages with a dropdown selector."
+        }
+      },
+      "usage": {
+        "title": "How to Use Translations",
+        "template": {
+          "title": "In Templates",
+          "desc": "Use the translate pipe in your HTML templates to display translated text."
+        },
+        "files": {
+          "title": "Translation Files",
+          "desc": "Translation files are stored in src/assets/i18n/ as JSON files (en.json, de.json, bn.json)."
+        },
+        "note": {
+          "title": "Important Note:",
+          "desc": "All translation files must have the same structure with matching keys to ensure translations work correctly across all languages."
+        }
+      },
+      "architecture": {
+        "title": "System Architecture",
+        "intro": "The i18n system follows a layered architecture for loading and managing translations:",
+        "components": {
+          "app": "App Component",
+          "appDesc": "Initializes language settings and loads saved preferences",
+          "translate": "TranslateService",
+          "translateDesc": "Manages current language and provides translation methods",
+          "loader": "HTTP Loader",
+          "loaderDesc": "Loads translation JSON files from the server",
+          "files": "Translation Files",
+          "filesDesc": "JSON files containing key-value pairs for each language"
+        }
+      },
+      "languages": {
+        "title": "Supported Languages",
+        "intro": "This application currently supports three languages:",
+        "code": "Code",
+        "status": "Status",
+        "active": "Active",
+        "adding": {
+          "title": "Adding a New Language",
+          "desc": "To add support for a new language:",
+          "step1": "Create a new JSON file in src/assets/i18n/ (e.g., fr.json for French)",
+          "step2": "Copy the structure from en.json and translate all values",
+          "step3": "Add the language to the language switcher component"
+        }
+      },
+      "bestPractices": {
+        "title": "Best Practices",
+        "item1": "Always use translation keys instead of hardcoded text in templates",
+        "item2": "Keep translation file structures consistent across all languages",
+        "item3": "Use hierarchical keys (e.g., 'home.title') for better organization",
+        "item4": "Test all languages after making changes to ensure nothing is broken"
+      },
+      "resources": {
+        "title": "Additional Resources",
+        "link1": "ngx-translate/core - Official Documentation",
+        "link2": "Angular i18n Guide - Angular Official Guide",
+        "link3": "ngx-translate/http-loader - HTTP Loader Documentation"
+      }
+    }
   }
 }
