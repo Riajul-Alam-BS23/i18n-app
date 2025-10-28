@@ -1,7 +1,7 @@
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +23,6 @@ import { HttpLoaderFactory } from './core/services/translation-loader';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
@@ -34,7 +33,8 @@ import { HttpLoaderFactory } from './core/services/translation-loader';
     })
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [App]
 })
